@@ -675,7 +675,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 
       case council_room:
         //+4 Cards
-        return cardEffect_concil_room(handPos,state);
+        return cardEffect_council_room(handPos,state);
 
       case feast:
         //gain card with cost up to 5
@@ -1209,7 +1209,7 @@ int cardEffect_adventurer(int drawntreasure,int currentPlayer,int z,struct gameS
     }
     return 0;
 }
-int cardEffect_concil_room(int handPos,struct gameState *state)
+int cardEffect_council_room(int handPos,struct gameState *state)
 {
   int i;
   int currentPlayer = whoseTurn(state);
