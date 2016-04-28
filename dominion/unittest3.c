@@ -33,6 +33,7 @@ void testUpdateCoins(struct gameState *p){
     p->hand[1][2] = copper;
     p->hand[1][3] = silver;
     p->hand[1][4] = gold;
+    p->handCount[1]=5;
     updateCoins(1,p,0);
     printf("%d\n", p->coins);
     assert(p->coins==8);
