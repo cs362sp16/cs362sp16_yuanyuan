@@ -139,6 +139,6 @@ int cardEffect_mine(int handPos,int choice1,int choice2,struct gameState *state)
 
 int cardEffect_feast(int choice1,struct gameState *state);
 
-int cardEffect_concil_room(int handPos,struct gameState *state);
+int cardEffect_council_room(int handPos,struct gameState *state);
 
 #endif
