@@ -1190,23 +1190,30 @@ int cardEffect_adventurer(int drawntreasure,int currentPlayer,int z,struct gameS
   int cardDrawn;
   int temphand[MAX_HAND];
   while(drawntreasure<2){
+    //printf("dominion.c adventurer\n");
     if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
       shuffle(currentPlayer, state);
     }
     drawCard(currentPlayer, state);
+    //printf("currentPlayer: %d,%d\n", whoseTurn(state),currentPlayer);
     cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
     if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
-      drawntreasure++;
+      {
+        drawntreasure++;
+        //printf("%d\n",state->handCount[currentPlayer]);
+      }
     else{
       temphand[z]=cardDrawn;
       state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
       z++;
     }
+    //printf("handCount-after:%d\n", state->handCount[currentPlayer]);
     }
     while(z-1>=0){
       state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
       z=z-1;
     }
+    //printf("handCount after adventurer%d\n", state->handCount[currentPlayer]);
     return 0;
 }
 int cardEffect_council_room(int handPos,struct gameState *state)
