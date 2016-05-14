@@ -1,4 +1,4 @@
-//This test is to test the implamentation of card smithy
+//This test is to test the implamentation of card outpost
 #include "dominion.h"
 #include <stdio.h>
 #include "rngs.h"

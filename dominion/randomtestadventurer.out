@@ -895,18 +895,18 @@ dominion.c:creating 'dominion.c.gcov'
         -:  545:    //Shufffle the deck
         3:  546:    shuffle(player, state);//Shuffle the deck up and make it so that we can draw
         -:  547:
-        -:  548:    if (DEBUG){//Debug statements
+        -:  548:    /*if (DEBUG){//Debug statements
         -:  549:      printf("Deck count now: %d\n", state->deckCount[player]);
-        -:  550:    }
+        -:  550:    }*/
         -:  551:
         3:  552:    state->discardCount[player] = 0;
         -:  553:
         -:  554:    //Step 2 Draw Card
         3:  555:    count = state->handCount[player];//Get current player's hand count
         -:  556:
-        -:  557:    if (DEBUG){//Debug statements
+        -:  557:    /*if (DEBUG){//Debug statements
         -:  558:      printf("Current hand count: %d\n", count);
-        -:  559:    }
+        -:  559:    }*/
         -:  560:
         3:  561:    deckCounter = state->deckCount[player];//Create a holder for the deck count
         -:  562:
