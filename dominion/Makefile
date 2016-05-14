@@ -66,7 +66,7 @@ randomadventurer:
 		echo "GCOV AFTER 1 TEST adventurer" >> randomtestadventurer.out
 		gcov dominion.c >> randomtestadventurer.out
 		echo "Coverage for each function" >> randomtestadventurer.out
-		gcov -f dominion.c >> randomtestadventurer.out
+		gcov -f -b dominion.c >> randomtestadventurer.out
 		cat dominion.c.gcov >> randomtestadventurer.out
 
 randomcard1:
@@ -74,9 +74,7 @@ randomcard1:
 	echo "GCOV AFTER 1 TEST card 1" >> randomtestcard1.out
 	gcov dominion.c >> randomtestcard1.out
 	echo "Coverage for each function" >> randomtestcard1.out
-	gcov -f dominion.c >> randomtestcard1.out
-	echo "Branch coverage" >> randomtestcard1.out
-	gcov -b dominion.c >> randomtestcard1.out
+	gcov -f -b dominion.c >> randomtestcard1.out
 
 randomcard2:
 	./randomtestcard2 42 &> randomtestcard2.out

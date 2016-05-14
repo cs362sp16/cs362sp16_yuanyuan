@@ -5,10 +5,11 @@
 #include <stdlib.h>
 #include <assert.h>
 
-#define MAX_TESTS 100
+#define MAX_TESTS 1000
 
 int main () {
   int card,handCountForCurrent[MAX_PLAYERS],numberbuys,seed,player,players;
+  int suc=0,fail=0;
   int i;//get other player's hand count
   struct gameState G;
   struct gameState *p = &G;
@@ -33,13 +34,15 @@ int main () {
     p->hand[player][1] = council_room;
     //pass the number of current player's handCount to a variable
     numberbuys=p->numBuys;
-    printf("Test for the card council_room Beginning\n");
     cardEffect_council_room(1,p);
     //test current player's handcount
     if (handCountForCurrent[player]+4==p->handCount[player] && numberbuys+1==p->numBuys) {
-      printf("Test for current player's handcount and numBuys successed.\n");
+      //printf("Test for current player's handcount and numBuys successed.\n");
+      suc++;
     }
-    else printf("Test for current player's handcount and numBuys failed.\n");
+    else {//printf("Test for current player's handcount and numBuys failed.\n");
+        fail++;
+      }
     //test other player's handcount
     int num = 0; //get the total number of the players which test successed.
     for (int j = 0; j < players; j++) {
@@ -50,10 +53,12 @@ int main () {
       }
     }
     if (num==players-1) {
-      printf("Test for other player's handcount successed.\n");
+      //printf("Test for other player's handcount successed.\n");
+      suc++;
     }
-    else printf("Test for other player's handcount failed.\n");
-
+    else //printf("Test for other player's handcount failed.\n");
+      fail++;
   }
+  printf("time failed: %d time successed: %d\n",fail,suc);
   return 0;
 }
