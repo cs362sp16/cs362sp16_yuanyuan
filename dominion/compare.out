@@ -1,0 +1,90 @@
+Test for the implamentation of card council_room success.
+GCOV AFTER 1 CARDTEST
+Function 'compare'
+Lines executed:83.33% of 6
+
+Function 'newGame'
+Lines executed:0.00% of 2
+
+Function 'kingdomCards'
+Lines executed:0.00% of 12
+
+Function 'initializeGame'
+Lines executed:85.90% of 78
+
+Function 'shuffle'
+Lines executed:94.44% of 18
+
+Function 'playCard'
+Lines executed:78.57% of 14
+
+Function 'buyCard'
+Lines executed:0.00% of 15
+
+Function 'numHandCards'
+Lines executed:0.00% of 1
+
+Function 'handCard'
+Lines executed:100.00% of 2
+
+Function 'supplyCount'
+Lines executed:0.00% of 1
+
+Function 'fullDeckCount'
+Lines executed:0.00% of 11
+
+Function 'whoseTurn'
+Lines executed:100.00% of 1
+
+Function 'endTurn'
+Lines executed:0.00% of 22
+
+Function 'isGameOver'
+Lines executed:0.00% of 12
+
+Function 'scoreFor'
+Lines executed:0.00% of 26
+
+Function 'getWinners'
+Lines executed:0.00% of 33
+
+Function 'drawCard'
+Lines executed:33.33% of 24
+
+Function 'getCost'
+Lines executed:23.33% of 30
+
+Function 'cardEffect'
+Lines executed:8.22% of 219
+
+Function 'discardCard'
+Lines executed:73.33% of 15
+
+Function 'gainCard'
+Lines executed:0.00% of 15
+
+Function 'updateCoins'
+Lines executed:100.00% of 14
+
+Function 'cardEffect_adventurer'
+Lines executed:56.25% of 16
+
+Function 'cardEffect_council_room'
+Lines executed:100.00% of 10
+
+Function 'cardEffect_feast'
+Lines executed:0.00% of 20
+
+Function 'cardEffect_mine'
+Lines executed:0.00% of 17
+
+Function 'cardEffect_remodel'
+Lines executed:0.00% of 13
+
+Function 'cardEffect_smithy'
+Lines executed:100.00% of 6
+
+File 'dominion.c'
+Lines executed:28.48% of 653
+dominion.c:creating 'dominion.c.gcov'
+

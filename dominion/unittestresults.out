@@ -1,25 +1,50 @@
 Test for the initializeGame function success.
 GCOV AFTER 1 TEST
 File 'dominion.c'
-Lines executed:16.41% of 652
+Lines executed:16.39% of 653
 dominion.c:creating 'dominion.c.gcov'
 
 Test for the playCard function success.
 GCOV AFTER 2 TEST
 File 'dominion.c'
-Lines executed:21.17% of 652
+Lines executed:21.29% of 653
 dominion.c:creating 'dominion.c.gcov'
 
 8
 Test for function updateCoins success.
 GCOV AFTER 3 TEST
 File 'dominion.c'
-Lines executed:21.78% of 652
+Lines executed:21.90% of 653
 dominion.c:creating 'dominion.c.gcov'
 
 Test for the function getCost success.
 GCOV AFTER 4 TEST
 File 'dominion.c'
-Lines executed:22.85% of 652
+Lines executed:22.97% of 653
+dominion.c:creating 'dominion.c.gcov'
+
+Test for the implamentation of card council_room success.
+GCOV AFTER 1 CARDTEST
+File 'dominion.c'
+Lines executed:26.19% of 653
+dominion.c:creating 'dominion.c.gcov'
+
+6
+The test for the implamentation of smithy successed.
+GCOV AFTER 2 CARDTEST
+File 'dominion.c'
+Lines executed:27.11% of 653
+dominion.c:creating 'dominion.c.gcov'
+
+The test for the implamentation of minion failed.
+GCOV AFTER 3 CARDTEST
+File 'dominion.c'
+Lines executed:28.02% of 653
+dominion.c:creating 'dominion.c.gcov'
+
+The test for the implamentation of outpost successed.
+GCOV AFTER 4 CARDTEST
+File 'dominion.c'
+Lines executed:28.48% of 653
 dominion.c:creating 'dominion.c.gcov'
 
