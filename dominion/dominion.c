@@ -545,18 +545,18 @@ int drawCard(int player, struct gameState *state)
     //Shufffle the deck
     shuffle(player, state);//Shuffle the deck up and make it so that we can draw
 
-    if (DEBUG){//Debug statements
+    /*if (DEBUG){//Debug statements
       printf("Deck count now: %d\n", state->deckCount[player]);
-    }
+    }*/
 
     state->discardCount[player] = 0;
 
     //Step 2 Draw Card
     count = state->handCount[player];//Get current player's hand count
 
-    if (DEBUG){//Debug statements
+    /*if (DEBUG){//Debug statements
       printf("Current hand count: %d\n", count);
-    }
+    }*/
 
     deckCounter = state->deckCount[player];//Create a holder for the deck count
 
