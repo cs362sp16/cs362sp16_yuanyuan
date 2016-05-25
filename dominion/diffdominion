@@ -1,0 +1,29 @@
+#!/bin/bash
+startingDir=`pwd`
+
+#compile first implementation of dominion into folder
+gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c testdominion.c rngs.c interface.c -o testDominion1 -lm -g
+
+cd otherDom
+#compile second implementation of dominion into folder
+gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c testdominion.c rngs.c interface.c -o testDominion2 -lm -g
+mv testDominion2 $startingDir
+#run both implementations and store output into files
+
+cd $startingDir
+
+./testDominion1 42 &> t1results.out
+echo "GCOV AFTER testDominion1: " >> t1results.out
+gcov dominion.c >> t1results.out
+./testDominion2 42 &> t2results.out
+echo "GCOV AFTER testDominion2: " >> t1results.out
+gcov dominion.c >> t2results.out
+
+#diff the files
+diff t1results.out t2results.out &> diffdomresults.out
+
+if [ $? == 0 ]; then
+	echo TEST PASSED
+else
+	echo TEST FAILED
+fi

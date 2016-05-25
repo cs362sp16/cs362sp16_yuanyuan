@@ -85,7 +85,15 @@ randomcard2:
 	echo "Branch coverage" >>randomtestcard2.out
 	gcov -b dominion.c >>randomtestcard2.out
 
+testDominion:
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c testdominion.c rngs.c interface.c -o testdominion -lm -g
+
+runTestDominion: testDominion
+	./testDominion &> testDominionResults.out
+	gcov dominion.c >> testDominionResults.out
+	cat dominion.c.gcov >> testDominionResults.out
+
 all: playdom player
 
 clean:
-	rm -rf *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 randomtestadventurer randomtestcard2 randomtestcard1 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so *.a *.dSYM
+	rm -rf *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 randomtestadventurer randomtestcard2 randomtestcard1 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so *.a *.dSYM testDominion2 testDominion1
