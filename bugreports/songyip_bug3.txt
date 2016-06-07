@@ -1,0 +1,1 @@
+in the function which implement the card remodel, when I set choice1 to be 0, the result is always wrong. I found that there is a bug existed in the for loop. ÒiÓ should start from 0, not 1. if i is 0, this function will never find a position that state->hand[currentPlayer][i] == j. 
