@@ -19,8 +19,8 @@ int main (int argc, char** argv) {
   //printf("%d\n",p->handCount[1]);
   cardEffect(minion,-1,0,-1,p,0,-1);//choice 2
   //printf("%d,%d\n",p->handCount[0], p->handCount[1]);
-  assert(p->handCount[0]!=8);//other player discard hand and redraw4 cards
-  assert(p->handCount[1]!=4);//current player discard played card and draw 4 cards
-  printf("The test for the implamentation of minion failed.\n");
+  assert(p->handCount[0]=4);//other player discard hand and redraw4 cards
+  assert(p->handCount[1]=4);//current player discard played card and draw 4 cards
+  printf("The test for the implamentation of minion success.\n");
   return 0;
 }
