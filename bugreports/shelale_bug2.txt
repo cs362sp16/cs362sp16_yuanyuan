@@ -1,0 +1,1 @@
+Function: council_room_testIn this function, it should draw 4 card t the current player, not 5 card.	for (i = 0; i < 5; i++) {	drawCard(currentPlayer, state);	}Therefore, here the Ò5Ó should change to 4. 
